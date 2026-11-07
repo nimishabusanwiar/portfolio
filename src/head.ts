@@ -38,7 +38,7 @@ export function headFor(route: Route): string {
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Nimisha Busaniwar",
-      jobTitle: route.lang === "fr" ? "Ingénieure IA (stagiaire)" : "AI Engineer (intern)",
+      jobTitle: route.lang === "fr" ? "Ingénieure IA" : "AI Engineer",
       url: SITE_URL + "/",
       email: `mailto:${LINKS.email}`,
       address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
