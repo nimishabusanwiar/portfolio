@@ -1,0 +1,51 @@
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/inter-tight";
+@import "@fontsource/ibm-plex-mono/latin-400.css";
+@import "@fontsource/ibm-plex-mono/latin-500.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-display: "Inter Tight Variable", "Inter Variable", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-ink: #0b1b33;
+  --color-muted: #4b5563;
+  --color-subtle: #5b6472;
+  --color-chip: #33415c;
+  --color-accent: #1d4ed8;
+  --color-accent-tint: #f3f6fd;
+  --color-line: #e3e6eb;
+  --color-line-soft: #eef0f3;
+  --color-paper: #fafaf8;
+  --color-tint: #f1f4f9;
+  --color-ok: #15803d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    line-height: 1.55;
+  }
+  a {
+    @apply text-accent underline-offset-4;
+  }
+  a:hover {
+    @apply text-ink;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  [id] {
+    scroll-margin-top: 88px;
+  }
+}
